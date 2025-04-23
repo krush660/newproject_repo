@@ -1,0 +1,8 @@
+@Test(priority = 3)
+public void verify Logout() {
+    DashboardPage dashboard = new DashboardPage(driver);
+    dashboard.clickLogout();
+
+    LoginPage login = new LoginPage(driver);
+    Assert.assertTrue(login.isLoginButtonDisplayed(), "Logout failed.");
+}

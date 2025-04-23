@@ -1,0 +1,12 @@
+@Test(priority = 2)
+public void addNewPatientRecord() {
+    DashboardPage dashboard = new DashboardPage(driver);
+    dashboard.navigateToPatientModule();
+
+    PatientPage patient = new PatientPage(driver);
+    patient.clickAddNewPatient();
+    patient.fillPatientForm("John", "Doe", "01/01/1990", "Male", "1234567890");
+    patient.savePatient();
+
+    Assert.assertTrue(patient.isPatientSavedMessageDisplayed(), "Patient was not added successfully.");
+}

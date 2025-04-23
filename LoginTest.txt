@@ -1,0 +1,42 @@
+package tests;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.time.Duration;
+
+public class LoginTest {
+    WebDriver driver;
+
+    @BeforeTest
+    public void setup() {
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        driver.get("https://cignahealthcare-erp-demo.com/login"); // dummy URL
+    }
+
+    @Test
+    public void loginTest() {
+        WebElement username = driver.findElement(By.id("username"));
+        WebElement password = driver.findElement(By.id("password"));
+        WebElement loginBtn = driver.findElement(By.id("loginBtn"));
+
+        username.sendKeys("testuser");
+        password.sendKeys("testpass");
+        loginBtn.click();
+
+        String expectedTitle = "Cigna ERP Dashboard";
+        assert driver.getTitle().contains(expectedTitle) : "Login Failed or Dashboard title mismatch";
+    }
+
+    @AfterTest
+    public void tearDown() {
+        driver.quit();
+    }
+}

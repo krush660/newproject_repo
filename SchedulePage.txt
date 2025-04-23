@@ -1,0 +1,42 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class SchedulePage {
+    WebDriver driver;
+
+    // Locators
+    By scheduleBtn = By.id("scheduleNew");
+    By patientName = By.id("patientName");
+    By doctorDropdown = By.id("doctor");
+    By datePicker = By.id("appointmentDate");
+    By timeSlot = By.id("appointmentTime");
+    By reasonField = By.id("reason");
+    By submitBtn = By.id("submitAppointment");
+    By confirmationMsg = By.id("confirmation");
+
+    public SchedulePage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void clickScheduleButton() {
+        driver.findElement(scheduleBtn).click();
+    }
+
+    public void fillAppointmentForm(String name, String doctor, String date, String time, String reason) {
+        driver.findElement(patientName).sendKeys(name);
+        driver.findElement(doctorDropdown).sendKeys(doctor);
+        driver.findElement(datePicker).sendKeys(date);
+        driver.findElement(timeSlot).sendKeys(time);
+        driver.findElement(reasonField).sendKeys(reason);
+    }
+
+    public void submitAppointment() {
+        driver.findElement(submitBtn).click();
+    }
+
+    public boolean isConfirmationDisplayed() {
+        return driver.findElement(confirmationMsg).isDisplayed();
+    }
+}

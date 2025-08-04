@@ -1,6 +1,6 @@
 build:
-scripts:
-    -echo ""first step"
-    -echo ""second step"
+  script:
+    - echo "first step"
+    - echo "second step"
 
 

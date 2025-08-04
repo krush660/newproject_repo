@@ -1,5 +1,13 @@
-build:
+build-job:
  script:
    
     - echo "first step"
     - echo "second step"
+
+test-job:
+   script:
+      -echo "Testing Step"
+
+deploy-job:
+    script:
+       -echo "Deploy Step"

@@ -18,8 +18,7 @@ public class dataprovider_2 {
     @BeforeMethod
     public void launchApp() {
         // Set up the ChromeDriver path
-    	   System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-        // Initialize the WebDriver
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64 (4)\\chromedriver-win64\\chromedriver.exe");        // Initialize the WebDriver
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     //.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

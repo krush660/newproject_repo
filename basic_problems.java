@@ -3,15 +3,17 @@ package auto;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class basic_problems {
 	
 	public static void main(String[] args) throws InterruptedException {
         // Setting the system property for the ChromeDriver
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
+	       System.setProperty("webdriver.edge.driver", "C:\\Users\\hp\\Downloads\\edgedriver_win64 (1)\\msedgedriver.exe");
 
-        // Creating an instance of ChromeDriver
-        WebDriver driver = new ChromeDriver();
+	        // Create an instance of EdgeDriver
+	        WebDriver driver = new EdgeDriver();
+
 
         // Opening a website (example: Google)
         driver.get("https://www.facebook.com/");

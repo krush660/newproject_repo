@@ -10,7 +10,7 @@ import jxl.read.biff.BiffException;
 public class data_driven_framework {
 	public static void main(String[] args) throws BiffException, IOException {
 		
-		FileInputStream f=new FileInputStream("C:\\Users\\hp\\OneDrive\\Desktop\\kru.xls");
+		FileInputStream f=new FileInputStream("C:\\Users\\hp\\OneDrive\\Desktop\\krushnal.xls");  //"C:\Users\hp\OneDrive\Desktop\d.xlsx"
 		
 		Workbook wb = Workbook.getWorkbook(f);
 		

@@ -16,7 +16,7 @@ public class DataProviderAnnotation {
 
 	    @BeforeMethod
 	    public void launchApp() {
-	        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64\\chromedriver.exe");
+	        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64 (4)\\chromedriver-win64\\chromedriver.exe");
 
 	        driver = new ChromeDriver();
 	        driver.get("https://www.facebook.com/");

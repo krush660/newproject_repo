@@ -10,7 +10,10 @@ import java.util.List;
 public class CountImages {
     public static void main(String[] args) {
         // Step 1: Set up WebDriver and open the webpage
-    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
+
+
+
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64 (4)\\chromedriver-win64\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         // Navigate to the webpage

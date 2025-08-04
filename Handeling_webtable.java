@@ -8,17 +8,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class Handeling_webtable {
 	
 	
 	public static void main(String[] args) throws InterruptedException {
         // Setting the system property for the ChromeDriver
-		   System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64 (3)\\chromedriver-win64\\chromedriver.exe");
 
-        WebDriver driver = new ChromeDriver();
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\hp\\Downloads\\edgedriver_win64 (1)\\msedgedriver.exe");
 
-        driver.get("https://money.rediff.com/indices/bse/bankex");
+        // Create an instance of EdgeDriver
+        WebDriver driver = new EdgeDriver();
         
         WebElement datatable = driver.findElement(By.className("dataTable"));
         

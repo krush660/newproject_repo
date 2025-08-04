@@ -9,22 +9,23 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class handled_table {
     public static void main(String[] args) throws InterruptedException {
         // Setting the system property for the ChromeDriver
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
+    	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64 (4)\\chromedriver-win64\\chromedriver.exe");
+
 
         WebDriver driver = new ChromeDriver();
 
         // Navigate to the website
-        driver.get("https://money.rediff.com/indices/bse/bankex");
+        driver.get("https://www.dezlearn.com/webtable-example/");
 
         // Locate the table
-        WebElement datatable = driver.findElement(By.className("dataTable"));
+        WebElement datatable = driver.findElement(By.xpath("//table[@class='tg']"));
 
         // Find all table rows (tr)
-        List<WebElement> rows = datatable.findElements(By.tagName("tr"));
+        List<WebElement> rows = datatable.findElements(By.tagName("td"));
 
         // Print each row
         for (WebElement row : rows) {
-            System.out.println(row.getText()); // Prints the full row data
+            System.out.println(row.getText() + ""); // Prints the full row data
         }
 
         // Close the browser

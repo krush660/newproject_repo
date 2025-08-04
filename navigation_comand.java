@@ -9,8 +9,7 @@ public class navigation_comand {
 	
 	   public static void main(String[] args) throws InterruptedException {
 	        // Setting the system property for the ChromeDriver
-	        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-
+	        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64 (4)\\chromedriver-win64\\chromedriver.exe");
 	        // Creating an instance of ChromeDriver
 	        WebDriver driver = new ChromeDriver();
 
@@ -18,12 +17,12 @@ public class navigation_comand {
              driver.manage().window().maximize();
              Thread.sleep(1500);
 	         driver.navigate().back();
-	         driver.navigate().forward();
-	         driver.navigate().refresh();
-	         driver.navigate().back();
-	         driver.navigate().forward();
+	     //    driver.navigate().forward();
+	     //    driver.navigate().refresh();
+	     //    driver.navigate().back();
+	        // driver.navigate().forward();
 	        
-driver.close();
+//driver.close();
 
 	       
 	

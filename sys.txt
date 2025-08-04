@@ -1,0 +1,2 @@
+Test Case ID | Test Summary     | Steps to Reproduce | Expected Result | Status
+TC001        | Verify Login     | Enter valid creds  | Login successful| Pass

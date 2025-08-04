@@ -14,13 +14,13 @@ public class datadriven23 {
 	
 	public static void main(String[] args) throws IOException, RowsExceededException, WriteException  {
 		
-		FileOutputStream file = new FileOutputStream("C:\\\\Users\\\\hp\\\\OneDrive\\\\Desktop\\\\kru.xls");
+		FileOutputStream file = new FileOutputStream("C:\\\\Users\\\\hp\\\\OneDrive\\\\Desktop\\\\krushnal.xls");
 		
 		WritableWorkbook wb =Workbook.createWorkbook(file);
 		
-		WritableSheet ws=wb.createSheet("sheet",1);
+		WritableSheet ws=wb.createSheet("Sheet1",1);
 		
-Label lb=new Label(0, 0, "automation")	;
+Label lb=new Label(0, 0, "kjk")	;
 
 ws.addCell(lb);
 

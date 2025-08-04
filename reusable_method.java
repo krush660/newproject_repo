@@ -8,7 +8,7 @@ public class reusable_method {
     WebDriver driver;
 
     public void lunchapp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\hp\\\\Downloads\\\\chromedriver-win64 (3)\\\\chromedriver-win64\\\\chromedriver.exe");
 
         // Creating an instance of ChromeDriver
         driver = new ChromeDriver();

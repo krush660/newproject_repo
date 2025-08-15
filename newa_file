@@ -1,0 +1,44 @@
+package auto;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+
+public class LaunchMultipleBrowsers {
+    public static void main(String[] args) {
+        // ChromeDriver path
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+
+        // EdgeDriver path
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\hp\\Downloads\\edgedriver_win64\\msedgedriver.exe");
+
+        // Chrome headless
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless"); // headless mode
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--disable-dev-shm-usage");
+
+        // Edge headless
+        EdgeOptions edgeOptions = new EdgeOptions();
+        
+        // Creating drivers in headless mode
+        WebDriver chromeDriver = new ChromeDriver(chromeOptions);
+        WebDriver edgeDriver = new EdgeDriver(edgeOptions);
+
+        // Opening a website in Chrome
+        chromeDriver.get("https://www.google.com");
+        System.out.println("Chrome Title: " + chromeDriver.getTitle());
+
+        // Opening a website in Edge
+        edgeDriver.get("https://www.bing.com");
+        System.out.println("Edge Title: " + edgeDriver.getTitle());
+
+        // Closing browsers
+        chromeDriver.quit();
+        edgeDriver.quit();
+        
+        
+    }
+}
